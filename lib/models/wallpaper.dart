@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:unsplash/models/wallpaper_state.dart';
 
 class WallpaperData {
   final String id;
@@ -29,8 +30,8 @@ List<ColorTone> dummyData = [
   ColorTone(Colors.green),
   ColorTone(Colors.cyan),
 ];
-// Finally Provider se ho gya using RiverPod
-final wallpaperProvider = Provider<List>((ref) {
+
+final wallpaperProvider = Provider<List<WallpaperData>>((ref) {
   return <WallpaperData>[
     WallpaperData(
       id: "1",
@@ -105,6 +106,10 @@ final wallpaperProvider = Provider<List>((ref) {
       topOftheMonth: false,
     ),
   ];
+});
+
+final wallpaperListProvider = StateNotifierProvider((ref) {
+  return WallpaperState(dummyData2);
 });
 
 List<WallpaperData> dummyData2 = [

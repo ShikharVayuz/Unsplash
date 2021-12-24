@@ -1,0 +1,2 @@
+com/example/wallpaper_manager_flutter/BuildConfig.java
+ com.example.wallpaper_manager_flutter.BuildConfig
